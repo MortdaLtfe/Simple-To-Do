@@ -1,0 +1,107 @@
+:root{
+  --main-font:'Noto Sans', sans-serif;;
+}
+
+html{
+  height: 100%;
+  width: 100%
+}
+body{
+  font-family: var(--main-font);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #151515;
+  color: white;
+  position: absolute;
+  top:0;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.container{
+  width: 400px;
+  border-radius: 20px;
+  margin: 100px auto;  
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  color: #151515 ;
+}
+.inputs{
+  position: relative;
+
+}
+.inputs input, button{
+  border: none;
+  background-color: black;
+  padding: 12px 20px;
+}
+.inputs input{
+  border-top-left-radius: 18px; 
+  border-bottom-left-radius: 18px; 
+  width: calc(100% - 110px);
+  font-size: 12px;
+  background-color: #EEE !important;
+  font-weight: bold
+}
+.inputs button{
+  background-color: #6A4CFF;
+  color: white;
+  border-radius: 16px;
+  position: absolute;
+  right: -20px;
+  top:0;
+  padding: 11px 30px !important;
+}
+.inputs input,button:focus{
+  outline: none;
+}
+.container h2{
+  font-size: 18px;
+  margin: 10px 60px 10px 0 ;
+  border-left: 10px solid #FF4E4E;
+  padding: 10px 10px;
+}
+.container .place{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 60px 0 0;
+  width:100%;
+  width: 300px;
+}
+.container .place .box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px;
+  padding: 0 5px;
+  border-radius: 16px;
+  transition:.5s;
+}
+.container .place .box h4{
+  font-size: 18px;
+  font-weight: 500;
+}
+.container .place .box .check i{
+  margin: 0 10px;
+  font-size: 19px
+}
+.container .place .box .check input{
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.box.complate{
+  color: rgba(0,0,0,.5);
+  text-decoration: line-through;
+  
+}
+@media (max-width: 767px){
+  .container{
+    transform: scale(.8);
+  }
+}
